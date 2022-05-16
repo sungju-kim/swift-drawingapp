@@ -34,11 +34,34 @@
 
 ![](https://user-images.githubusercontent.com/78553659/157808587-c4898af0-51cf-4d42-a623-e2bd04a021c1.gif)
 
-
-
-
-
 **완료일시 22.3.10  20:40**
 
+## step3
+
+### 주요 작업
+- Observer패턴 적용
 
 
+### 고민과 해결
+ - 기존에 delegate로 구현되어있던 부분을 notificationCenter를 활용할 수 있도록 변경, delegate 패턴과 observer패턴은 어떤 차이가 있을까 생각을 해보니, delegate 패턴은 데이터가 `모델 -> VC `로 이동하고 observer패턴은 `모델 -> notificationCenter -> VC` 로 이동하는 차이가 있다고 생각
+
+**완료일시 22.3.11**
+
+## step4
+
+### 주요 기능
+- 사진앨범에서 사진 불러오기
+- 선택된 사진 테두리 표시
+- 선택된 사진 투명도 조절
+- 배경색 버튼 비활성화
+
+### 고민과 해결
+- 일반 사각형과 사진이 들어있는 사각형을 같은 타입으로 볼것인지 아닌지에 대해 고민
+    - 사진이 들어있는 사각형은 color값이 굳이 들어갈 필요가 없다고 생각해 새로운 타입을 만들어 일반 사각형을 상속 받도록 하고 일반사각형의 color값을 옵셔널값으로 만들어줌.
+    - 사진이 들어있는 사각형을 선택했을때에만 colorChangeButton을 비활성화 시켜야 하기때문에 rectangle의 color값이 nil일때는 버튼을 비활성화
+
+### 실행화면
+
+![](https://user-images.githubusercontent.com/78553659/168549728-c2b1a25e-cd6e-4b3a-9e1c-d0fcf5f3d0c2.gif)
+
+**완료일시 22.3.15**
